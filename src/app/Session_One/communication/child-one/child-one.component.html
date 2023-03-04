@@ -1,0 +1,30 @@
+<ng-container>
+    <!-- <div class="col-md-3">
+        <div class="card"  style="width: 18rem;" *ngIf="value">
+            <div class="card-body">
+              <h5 class="card-title">{{value.emp_Id}}</h5>
+              <h5 class="card-title">{{value.emp_Name}}</h5>
+              <h5 class="card-title">{{value.emp_desig}}</h5>
+              <h5 class="card-title">{{value.emp_Place}}</h5>
+            </div>
+          </div>
+    </div> -->
+    <table class="table" *ngIf="value">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Place</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{value.emp_Id}}</th>
+            <td>{{value.emp_Name}}</td>
+            <td>{{value.emp_desig}}</td>
+            <td>{{value.emp_Place}}</td>
+          </tr>
+        </tbody>
+      </table>
+</ng-container>

@@ -1,0 +1,27 @@
+<h1 class="heading">Session II</h1>
+
+<ng-container class="container mt-5">
+    <ng-container *ngIf="child_one">
+        <app-child1 (step1)="getNextData($event)"></app-child1>
+    </ng-container>
+    <ng-container *ngIf="child_two">
+        <app-child2
+         [moodFromParent]="moodFromParent"
+          (step2)="moodWiseData($event)"
+           (backStep2)="goToBack($event)" >
+        </app-child2>
+    </ng-container>
+    <ng-container *ngIf="child_three">
+        <app-child3 
+        [moodData]="moodData" 
+        (step3)="thankyou($event)"
+        (backStep3)="backStep3($event)"
+        ></app-child3>
+    </ng-container >
+    <ng-container *ngIf="child_four">
+        <app-child4  [ThankYou]="thanksGiving"></app-child4>
+    </ng-container>
+</ng-container>
+
+
+

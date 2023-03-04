@@ -1,0 +1,28 @@
+<div class="container mt-5 w-50">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Mood</th>
+       
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <th scope="row">  </th>
+            <td> {{moodData}} </td>
+          </tr> -->
+          <tr >
+            
+            <th scope="row"> {{moodData.id}} </th>
+            <td> {{moodData.mood}} </td>
+            
+            
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="text-center"> <button type="button" class="btn btn-primary" (click)="goToNext()">Next</button>
+        <button type="button" class="btn btn-primary ms-4" (click)="goToBack()">Back</button>
+      </div>
+</div>

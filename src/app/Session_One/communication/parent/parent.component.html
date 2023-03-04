@@ -1,0 +1,28 @@
+<h1 class="heading">Session I</h1>
+
+<!-- Child Two -->
+<ng-container *ngIf="message">
+    <app-child-two>
+        <div class="alert alert-light border d-flex " content>
+             <span class="btn-primary rounded px-2 me-2">{{message}} </span>   is Selected
+        </div>
+    </app-child-two>
+</ng-container>
+
+<h3>List of Employee</h3>
+<div class="row">
+    <ng-container *ngFor="let data of emp_Detail">
+        <div class="col-md-3">
+            <div class="card" [ngClass]="btnColor(data.emp_desig)" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{data.emp_desig}}</h5>
+                    <button [ngClass]="btnColor(data.emp_desig)" (click)="onSelectEmp(data.emp_Id)">Click For Employee's
+                        Data</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<!-- Child One -->
+<app-child-one [value]='selectedEmp'></app-child-one>

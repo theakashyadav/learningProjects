@@ -1,0 +1,8 @@
+<div class="p-5" *ngIf="!user_thank_you">
+    <h1 class="heading">Angular Workshop</h1>
+    <h1 class="heading">Session II</h1>
+    <app-user-mood (isNextPage)="newNavigation($event)" (emittedData)="getEmittedData($event)"  *ngIf="!user_mood"></app-user-mood>
+    <app-user-mood-selection [emittedData]="emittedDataInParent" (gotToMoods)="goToMood()" (emittedDetail)="getEmittedMoodDetail($event)" *ngIf="user_mood_selected"></app-user-mood-selection>
+    <app-user-mood-detail [emittedMoodData]="moodDetailData" (emitForMoodDetail)="forMoodDetail()" (emitForThankYou)="forThankYou()" *ngIf="user_mood_selected_detail"></app-user-mood-detail>
+</div>
+<app-thank-you (goOnDetail)="goOnDetail()"  *ngIf="user_thank_you"></app-thank-you>
